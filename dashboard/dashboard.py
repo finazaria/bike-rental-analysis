@@ -51,9 +51,15 @@ st.bar_chart(weather_counts)
 
 # Pertanyaan 5
 st.write('### Pertanyaan 5: Bagaimana temperatur mempengaruhi jumlah sepeda yang dirental?')
-plt.scatter(df_day['temp'], df_day['cnt'])
-plt.xlabel('Temperature')
-plt.ylabel('Count')
+# Plot the relationship between temperature and bike rentals using a scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(df_day['temp'], df_day['cnt'], color='blue', alpha=0.5)
+
+# Set title and labels
+plt.title('Relationship between Temperature and Bike Rentals')
+plt.xlabel('Temperature (Celsius)')
+plt.ylabel('Count of Bike Rentals')
+
 st.pyplot()
 
 # Conclusion
