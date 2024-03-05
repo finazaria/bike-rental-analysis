@@ -51,7 +51,10 @@ st.bar_chart(weather_counts)
 
 # Pertanyaan 5
 st.write('### Pertanyaan 5: Bagaimana temperatur mempengaruhi jumlah sepeda yang dirental?')
-st.scatter_chart(df_day, x='temp', y='cnt')
+plt.scatter(df_day['temp'], df_day['cnt'])
+plt.xlabel('Temperature')
+plt.ylabel('Count')
+st.pyplot()
 
 # Conclusion
 st.write('## Conclusion')
