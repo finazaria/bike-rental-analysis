@@ -7,7 +7,7 @@ import seaborn as sns
 # Read the data
 @st.cache
 def load_data():
-    return pd.read_csv("./day.csv")
+    return pd.read_csv("dashboard/day.csv")
 
 df_day = load_data()
 
