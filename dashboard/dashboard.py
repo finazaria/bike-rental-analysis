@@ -32,20 +32,7 @@ df_day['dteday'] = pd.to_datetime(df_day['dteday'])
 # Pertanyaan 1
 st.write('### Pertanyaan 1: Di bulan apakah sepeda paling banyak dirental?')
 monthly_counts = df_day.groupby('mnth')['cnt'].sum()
-
-# Plot the count of bike rental per month using a line plot
-plt.figure(figsize=(10, 6))
-plt.plot(monthly_counts.index, monthly_counts.values, marker='o', color='skyblue', linestyle='-')
-
-# Set title and labels
-plt.title('Count of Bike Rental per Month')
-plt.xlabel('Month')
-plt.ylabel('Count of Bike Rentals')
-
-# Set xticks to represent months
-plt.xticks(monthly_counts.index)
-
-st.pyplot()
+st.line_chart(monthly_counts)
 
 # Pertanyaan 2
 st.write('### Pertanyaan 2: Di musim apakah sepeda paling banyak dirental?')
